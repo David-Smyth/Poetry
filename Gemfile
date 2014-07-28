@@ -57,6 +57,9 @@ gem 'turbolinks', '1.1.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '1.0.2'
 
+# OpenCV image processing gem
+gem 'ruby-opencv', '0.0.13'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', '0.3.20', require: false

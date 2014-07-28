@@ -3,9 +3,9 @@ module ApplicationHelper
 	# Provide a page title with optional descriminator
 	def page_title(descriminator)
 		if descriminator.nil? || descriminator.empty?
-			"iso-yd | WebApp for ISO Standards for Yacht Design"
+			"Poetry | WebApp for Observable Science"
 		else
-			"iso-yd | #{descriminator} WebApp for ISO Standards for Yacht Design"
+			"Poetry | #{descriminator} WebApp for Observable Science"
 		end
 	end
 
