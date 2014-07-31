@@ -25,4 +25,4 @@ def secure_token
   end
 end
 
-IsoYd::Application.config.secret_key_base = secure_token
+Poetry::Application.config.secret_key_base = secure_token
