@@ -1,4 +1,4 @@
-# Poet - A Distributed System Integrating Multiple Embedded Nodes with
+# Poetry - A Distributed System Integrating Multiple Embedded Nodes with
 # Multiple Server Nodes
 
 This system uses WebApps at every node, each performing node specific
@@ -29,7 +29,7 @@ gem.
 
 * Configuration
 brew install opencv
-gem install ruby-opencv
+gem install ruby-opencv -- --with-opencv-dir=/usr/local/lib
 
 * Database creation
 
