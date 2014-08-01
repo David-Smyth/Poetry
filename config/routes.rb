@@ -1,5 +1,6 @@
 Poetry::Application.routes.draw do
 
+  get "users/new"
   # Routes to static pages
   root "static_pages#home"
   match '/help',    to: 'static_pages#help',    via: 'get'
