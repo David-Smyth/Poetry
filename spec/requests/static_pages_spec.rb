@@ -42,4 +42,19 @@ describe "Static Pages" do
     it { should have_content('David E. Smyth') }
 
   end
+
+  it "should have the right links on the layout" do
+    visit root_path
+    click_link "About"
+    expect(page).to have_title(page_title('About'))
+    click_link "Help"
+    expect(page).to have_title(page_title('Help for'))
+    click_link "Contact"
+    expect(page).to have_title(page_title('Contact Author of'))
+    click_link "Home"
+#    click_link "Sign up now!"
+#    expect(page).to # fill in
+#    click_link "sample app"
+#    expect(page).to # fill in
+  end
 end
