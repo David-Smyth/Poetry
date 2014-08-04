@@ -6,7 +6,13 @@ class User < ActiveRecord::Base
   # We will really validate using an email round-trip
   validates :email, presence: true, 
     format: { with: /@/ }, uniqueness: { case_sensitive: false }
-  before_save { self.email = email.downcase }
-  
+  before_save { email.downcase! }
+
+  # Adds attributes password, password_confirmation, password_digest, -- but only
+  # digest goes into the database. Adds authorization method.
   has_secure_password
+  validates :password, length: { minimum: 6 }
+
 end
+
+
