@@ -1,8 +1,8 @@
-<% provide(:title, 'Sign up as new user') %>
+<% provide(:title, 'User Profile') %>
 
 <div class="center hero-unit">
 
-<h1> ... Sign up ... </h1>
+<%= @user.name %>, <%= @user.email %>
 
 <!-- Someone somewhere is adding an extra end-div,
 	so while it looks like we need this, we do not!
