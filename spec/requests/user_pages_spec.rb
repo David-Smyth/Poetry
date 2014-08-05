@@ -7,8 +7,15 @@ describe "User pages" do
   describe "signup page" do
   	before { visit signup_path }
 
-  	it { should have_content('Sign up') }
   	it { should have_title(user_title('Sign up')) }
+  	it { should have_content('Sign up') }
+  end
+
+  describe "profile page" do
+  	before { visit user_path(user) }
+
+  	it { should have_title(user_title('Profile: #{user.name}')) }
+  	it { should have_content(user.name) }
   end
 
 end

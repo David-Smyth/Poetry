@@ -18,6 +18,8 @@ group :test do
 	# English-like syntax, together with Selenium
 	gem 'selenium-webdriver', '2.35.1'
 	gem 'capybara', '2.1.0'
+	# Factoru Girl by thoughtbot for creating instances in test cases
+	gem 'factory_girl_rails', '4.2.0'
 	# for OS X
 	gem 'growl', '1.0.3'
 	# for Linux
