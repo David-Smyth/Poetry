@@ -2,14 +2,15 @@ require 'spec_helper'
 
 describe User do
   # NB: email address must be mixed case here
-  before { @user = User.new name: "Demo Dude", 
+  before { @user = User.new(name: "Demo Dude", 
   	                        email: "Demo@DuDe.uk",
                             password: "some-password",
-                            password_confirmation: "some-password" }
+                            password_confirmation: "some-password") }
   subject { @user }
 
   it { should respond_to :name }
   it { should respond_to :email }
+  it { should respond_to :lc_email }
   # Using ActiveModel::has_secure_password
   it { should respond_to :password_digest }
   it { should respond_to :password }

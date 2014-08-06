@@ -8,4 +8,15 @@ module UsersHelper
 			"Poetry | #{descriminator}"
 		end
 	end
+
+  # Return Gravatar url for the user, using notes on 
+  # http://en.gravatar.com/site/implement/images/
+  # Note we use the MD5 hash of the lower case email, and use the 'mystery man'
+  # as a default, if there is no Gravatar related to the email address.
+  def gravatar_for(user)
+    gravatar_id  = Digest::MD5::hexdigest(user.email.downcase)
+    gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?d=mm"
+    image_tag(gravatar_url, alt: user.name, class: "gravatar")
+  end
+
 end
