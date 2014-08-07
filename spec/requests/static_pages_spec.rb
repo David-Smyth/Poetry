@@ -45,6 +45,7 @@ describe "Static Pages" do
 
   it "should have the right links on the layout" do
     visit root_path
+    expect(page).to have_title(page_title('Home of'))
     click_link "About"
     expect(page).to have_title(page_title('About'))
     click_link "Help"
@@ -52,9 +53,9 @@ describe "Static Pages" do
     click_link "Contact"
     expect(page).to have_title(page_title('Contact Author of'))
     click_link "Home"
-#    click_link "Sign up now!"
-#    expect(page).to # fill in
-#    click_link "sample app"
-#    expect(page).to # fill in
+    click_link "Sign up now!"
+    expect(page).to have_title(user_title('Sign up'))
+    click_link "Poetry"
+    expect(page).to have_title(page_title('Home of'))
   end
 end
