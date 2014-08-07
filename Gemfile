@@ -5,12 +5,16 @@ ruby '2.0.0'
 gem 'rails', '4.0.8'
 
 group :development, :test do
-    # Use sqlite3 as the database for Active Record, even though PostgreSQL for Heroku.
-    # So much easier that PostgreSQL, and using two different DBs ensures I stay portable.
-    gem 'sqlite3', '1.3.8'
-    # RSpec for testing, with generators
-    gem 'rspec-rails', '2.13.1'
-    gem 'guard-rspec', '2.5.0'
+  # Use sqlite3 as the database for Active Record, even though PostgreSQL for Heroku.
+  # So much easier that PostgreSQL, and using two different DBs ensures I stay portable.
+  gem 'sqlite3', '1.3.8'
+  # RSpec for testing, with generators
+  gem 'rspec-rails', '2.13.1'
+  gem 'guard-rspec', '2.5.0'
+  # OpenCV image processing gem -- should be production too, but
+  # I need to get a buildpack working, which needs aws, and s3, ...
+  # So not today.
+  gem 'ruby-opencv', '0.0.13'
 end
 
 group :test do
@@ -59,8 +63,7 @@ gem 'turbolinks', '1.1.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '1.0.2'
 
-# OpenCV image processing gem
-gem 'ruby-opencv', '0.0.13'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
