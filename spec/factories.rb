@@ -1,8 +1,8 @@
 FactoryGirl.define do
-	factory :user do
-		name     "John Glenn"
-		email    "Astronaut@Freedom7.nasa.gov"
-		password "321A-OK"
-		password_confirmation "321A-OK"
-	end
+  factory :user do
+    name     "David E. Smyth"
+    email    "Capt.David.Smyth@gmail.com"
+    password "Lets Go Sailing"
+    password_confirmation "Lets Go Sailing"
+  end
 end
