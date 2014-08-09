@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     # and the permitted parameters within that set (hash)
     @user = User.new(filter_user_params)
     if @user.save
+      sign_in @user
       flash[:success] = "Welcome to Poetry"
       # We don't have a create_path page -- instead we show the 
       # profile for the user (e.g., the user page, which is a

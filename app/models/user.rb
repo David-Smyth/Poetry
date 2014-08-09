@@ -23,6 +23,8 @@ class User < ActiveRecord::Base
   # Hence, we can always display as David.Smyth@Millennium-Space.com
   # if that is how the user entered it.
 
+  # Overriding the assignment operator did not work, oddly enough.
+  # Instead, needed to prepend to several callbacks.
   #def email=(new_email)
   #  email = new_email
   #  lc_email = email.downcase if not email.nil?
@@ -36,6 +38,21 @@ class User < ActiveRecord::Base
     self.lc_email = email.downcase if !email.nil?
   end
 
+  before_create :create_remember_token, append: true
+
+  def create_remember_token
+    # Create the token, but then generate the digest -- the non-invertable
+    # SHA1 hash of the value. Its this digest we really want.
+    self.remember_token = User.digest(User.new_remember_token)
+  end
+
+  def User.new_remember_token
+    SecureRandom.urlsafe_base64
+  end
+
+  def User.digest(token)
+    Digest::SHA1.hexdigest(token.to_s)
+  end
 end
 
 

@@ -22,6 +22,9 @@ group :test do
 	# English-like syntax, together with Selenium
 	gem 'selenium-webdriver', '2.35.1'
 	gem 'capybara', '2.1.0'
+  # Cucumber for user tests (such as signin)
+  gem 'cucumber-rails', '1.4.0', :require => false
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
 	# Factoru Girl by thoughtbot for creating instances in test cases
 	gem 'factory_girl_rails', '4.2.0'
 	# for OS X

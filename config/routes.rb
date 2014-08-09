@@ -8,8 +8,12 @@ Poetry::Application.routes.draw do
 
   # Routes to pages related to users
   resources :users
-  match '/signup', to: 'users#new', via: 'get'
+  match '/signup', to: 'users#new',         via: 'get'
 
+  # Routes for session new, create, destroy
+  resources :sessions, only: [:new, :create, :destroy]
+  match '/signin',  to: 'sessions#new',     via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
