@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :signed_in_user, only: [:edit, :update]
   
   def new
     @user = User.new
@@ -31,11 +32,27 @@ class UsersController < ApplicationController
     @user = User.find params[:id]
   end
 
+  def update
+    @user = User.find params[:id]
+    if @user.update_attributes(filter_user_params)
+      flash[:success] = "Profile updated"
+      redirect_to @user
+    else
+      render 'edit'
+    end
+  end
+
   private
     # Filter parameters coming from user web page (really, POST) to ensure
     # we only pay attention to the proper parameters. A malicious POST will
     # not put bogus junk into the instance or database.
     def filter_user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
+
+    # Before filters, invoked before actions
+    def signed_in_user
+      # Set flash[:notice] and redirect, all in one line
+      redirect_to signin_url, notice: "Please sign in." unless signed_in?
     end
 end
