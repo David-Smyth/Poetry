@@ -27,6 +27,10 @@ class UsersController < ApplicationController
   	@user = User.find params[:id]
   end
 
+  def edit
+    @user = User.find params[:id]
+  end
+
   private
     # Filter parameters coming from user web page (really, POST) to ensure
     # we only pay attention to the proper parameters. A malicious POST will
