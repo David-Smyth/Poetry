@@ -11,6 +11,9 @@ group :development, :test do
   # RSpec for testing, with generators
   gem 'rspec-rails', '2.13.1'
   gem 'guard-rspec', '2.5.0'
+  # Faker allows rake to create a bunch of fake, but kinda realistic users
+  # in our development and test databases
+  gem 'faker', '1.1.2'
   # OpenCV image processing gem -- should be production too, but
   # I need to get a buildpack working, which needs aws, and s3, ...
   # So not today.
@@ -24,9 +27,10 @@ group :test do
 	gem 'capybara', '2.1.0'
   # Cucumber for user tests (such as signin)
   gem 'cucumber-rails', '1.4.0', :require => false
-  gem 'database_cleaner', github: 'bmabey/database_cleaner'
-	# Factoru Girl by thoughtbot for creating instances in test cases
-	gem 'factory_girl_rails', '4.2.0'
+	# Factory Girl by thoughtbot for creating instances in test cases
+	gem 'factory_girl_rails', '4.4.0'
+  # Database Cleaner to clean up around tests
+  gem 'database_cleaner', '1.3.0'
 	# for OS X
 	gem 'growl', '1.0.3'
 	# for Linux
@@ -66,7 +70,9 @@ gem 'turbolinks', '1.1.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '1.0.2'
 
-
+# Pagination, used for list of all users
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
