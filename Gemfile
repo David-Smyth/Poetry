@@ -11,6 +11,8 @@ group :development, :test do
   # RSpec for testing, with generators
   gem 'rspec-rails', '2.13.1'
   gem 'guard-rspec', '2.5.0'
+  # SimpleCov for code coverage
+  gem 'simplecov', '~> 0.9.0'
   # Faker allows rake to create a bunch of fake, but kinda realistic users
   # in our development and test databases
   gem 'faker', '1.1.2'

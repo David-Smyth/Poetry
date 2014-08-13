@@ -12,11 +12,15 @@ describe SessionsHelper do
     end
 
     it "should not have empty space if empty discriminator" do
-      expect(user_title("")).to match(/^Poetry | Session/)
+      expect(session_title("")).to match(/^Poetry | Session/)
+    end
+
+    it "should not barf if nil discriminator" do
+      expect(session_title(nil)).to match(/^Poetry | Session/)
     end
 
     it "should work for arbitrary text" do
-      expect(user_title('Sign In')).to match(/^Poetry | Session Sign In/)
+      expect(session_title('Sign In')).to match(/^Poetry | Session Sign In/)
     end
 
   end

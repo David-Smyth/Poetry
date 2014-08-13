@@ -24,6 +24,17 @@ describe "AuthenticationPages" do
       end
     end
 
+    describe "with invalid password" do
+      let(:user) { FactoryGirl.create(:user) }
+      before do
+        fill_in "Email",    with: user.email.upcase
+        fill_in "Password", with: "Not the password"
+        click_button sign_in_button
+      end
+      it { should have_title("Sign in") }
+      it { should have_selector('div.alert.alert-error')}
+    end
+
     describe "with valid entries" do
       let(:user) { FactoryGirl.create(:user) }
       before do
