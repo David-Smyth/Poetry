@@ -14,7 +14,7 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-08-13T13:52:29-07:00">2014-08-13T13:52:29-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-08-13T14:03:45-07:00">2014-08-13T14:03:45-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         34.79
+         31.86
        </span>
     </span> hits/line)
   </h2>
@@ -107,7 +107,7 @@
         <td>30</td>
         <td>30</td>
         <td>0</td>
-        <td>40.5</td>
+        <td>39.6</td>
       </tr>
       
       <tr>
@@ -127,7 +127,7 @@
         <td>11</td>
         <td>11</td>
         <td>0</td>
-        <td>79.4</td>
+        <td>50.5</td>
       </tr>
       
       <tr>
@@ -137,7 +137,7 @@
         <td>18</td>
         <td>18</td>
         <td>0</td>
-        <td>80.1</td>
+        <td>79.4</td>
       </tr>
       
     </tbody>
@@ -230,7 +230,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         80.1
+         79.4
        </span>
     </span> hits/line)
   </h2>
@@ -262,7 +262,7 @@
         <td>18</td>
         <td>18</td>
         <td>0</td>
-        <td>80.1</td>
+        <td>79.4</td>
       </tr>
       
     </tbody>
@@ -314,7 +314,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         47.94
+         40.61
        </span>
     </span> hits/line)
   </h2>
@@ -356,7 +356,7 @@
         <td>30</td>
         <td>30</td>
         <td>0</td>
-        <td>40.5</td>
+        <td>39.6</td>
       </tr>
       
       <tr>
@@ -376,7 +376,7 @@
         <td>11</td>
         <td>11</td>
         <td>0</td>
-        <td>79.4</td>
+        <td>50.5</td>
       </tr>
       
     </tbody>
@@ -1495,8 +1495,8 @@
           <code class="ruby">  def signed_in?</code>
         </li>
       
-        <li class="covered" data-hits="198" data-linenumber="29">
-          <span class="hits">198</span>
+        <li class="covered" data-hits="194" data-linenumber="29">
+          <span class="hits">194</span>
           
           <code class="ruby">    !current_user.nil?</code>
         </li>
@@ -1609,14 +1609,14 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="345" data-linenumber="48">
-          <span class="hits">345</span>
+        <li class="covered" data-hits="333" data-linenumber="48">
+          <span class="hits">333</span>
           
           <code class="ruby">    remember_token = User.digest(cookies[:remember_token])</code>
         </li>
       
-        <li class="covered" data-hits="345" data-linenumber="49">
-          <span class="hits">345</span>
+        <li class="covered" data-hits="333" data-linenumber="49">
+          <span class="hits">333</span>
           
           <code class="ruby">    @current_user ||= User.find_by(remember_token: remember_token)</code>
         </li>
@@ -1873,8 +1873,8 @@
           <code class="ruby">	def user_title(descriminator)</code>
         </li>
       
-        <li class="covered" data-hits="100" data-linenumber="5">
-          <span class="hits">100</span>
+        <li class="covered" data-hits="96" data-linenumber="5">
+          <span class="hits">96</span>
           
           <code class="ruby">		if descriminator.nil? || descriminator.empty?</code>
         </li>
@@ -1891,8 +1891,8 @@
           <code class="ruby">		else</code>
         </li>
       
-        <li class="covered" data-hits="99" data-linenumber="8">
-          <span class="hits">99</span>
+        <li class="covered" data-hits="95" data-linenumber="8">
+          <span class="hits">95</span>
           
           <code class="ruby">			&quot;Poetry | #{descriminator}&quot;</code>
         </li>
@@ -1957,32 +1957,32 @@
           <code class="ruby">  def gravatar_for(user, options={ size: 50 })</code>
         </li>
       
-        <li class="covered" data-hits="134" data-linenumber="19">
-          <span class="hits">134</span>
+        <li class="covered" data-hits="72" data-linenumber="19">
+          <span class="hits">72</span>
           
           <code class="ruby">    gravatar_com  = &quot;https://secure.gravatar.com/avatar&quot;</code>
         </li>
       
-        <li class="covered" data-hits="134" data-linenumber="20">
-          <span class="hits">134</span>
+        <li class="covered" data-hits="72" data-linenumber="20">
+          <span class="hits">72</span>
           
           <code class="ruby">    gravatar_id   = Digest::MD5::hexdigest(user.email.downcase)</code>
         </li>
       
-        <li class="covered" data-hits="134" data-linenumber="21">
-          <span class="hits">134</span>
+        <li class="covered" data-hits="72" data-linenumber="21">
+          <span class="hits">72</span>
           
           <code class="ruby">    gravatar_opts = &quot;s=#{options[:size]}?d=mm&quot;</code>
         </li>
       
-        <li class="covered" data-hits="134" data-linenumber="22">
-          <span class="hits">134</span>
+        <li class="covered" data-hits="72" data-linenumber="22">
+          <span class="hits">72</span>
           
           <code class="ruby">    gravatar_url = &quot;#{gravatar_com}/#{gravatar_id}?#{gravatar_opts}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="134" data-linenumber="23">
-          <span class="hits">134</span>
+        <li class="covered" data-hits="72" data-linenumber="23">
+          <span class="hits">72</span>
           
           <code class="ruby">    image_tag(gravatar_url, alt: user.name, class: &quot;gravatar&quot;)</code>
         </li>
@@ -2341,8 +2341,8 @@
           <code class="ruby">  def User.digest(token)</code>
         </li>
       
-        <li class="covered" data-hits="542" data-linenumber="54">
-          <span class="hits">542</span>
+        <li class="covered" data-hits="530" data-linenumber="54">
+          <span class="hits">530</span>
           
           <code class="ruby">    Digest::SHA1.hexdigest(token.to_s)</code>
         </li>
