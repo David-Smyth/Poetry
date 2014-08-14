@@ -12,6 +12,11 @@ describe "AuthenticationPages" do
     it { should have_title('Sign in') }
     it { should have_content('Sign in') }
 
+    it { should_not have_link("Users") }
+    it { should_not have_link("Profile") }
+    it { should_not have_link('Settings') }
+    it { should_not have_link("Sign out") }
+
     describe "with invalid entries" do
       before { click_button sign_in_button }
 

@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :signed_in_user, only: [:edit, :update, :index]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only:  :destroy
+  before_action :existing_user,  only: [:new, :create]
 
   def new
     @user = User.new
@@ -80,5 +81,11 @@ class UsersController < ApplicationController
 
     def admin_user
       redirect_to root_url unless current_user.admin?
+    end
+
+    def existing_user
+      if signed_in?
+        redirect_to root_url, notice: "You are already signed in."
+      end
     end
 end

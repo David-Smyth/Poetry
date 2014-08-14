@@ -4,6 +4,11 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.8'
 
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', '0.3.20', require: false
+end
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record, even though PostgreSQL for Heroku.
   # So much easier that PostgreSQL, and using two different DBs ensures I stay portable.
@@ -20,6 +25,8 @@ group :development, :test do
   # I need to get a buildpack working, which needs aws, and s3, ...
   # So not today.
   gem 'ruby-opencv', '0.0.13'
+  # Use debugger
+  # gem 'debugger'
 end
 
 group :test do
@@ -76,10 +83,8 @@ gem 'jbuilder', '1.0.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', '0.3.20', require: false
-end
+# Gravatar
+gem 'gravatarify', '~> 3.0.0'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2'
@@ -90,5 +95,3 @@ gem 'unicorn'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]

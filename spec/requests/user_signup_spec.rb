@@ -29,7 +29,7 @@ describe "User Signup Page" do
       fill_in "Name", with: "David E. Smyth"
       fill_in "Email", with: "Capt.David.Smyth@gmail.com"
       fill_in "Password", with: "LetsDoLunch"
-      fill_in "Confirm Password", with: "LetsDoLunch"
+      fill_in "Confirm password", with: "LetsDoLunch"
     end
 
     it "should create a user" do
@@ -49,7 +49,5 @@ describe "User Signup Page" do
         it { should have_link("Sign in") }
       end
     end
-
-    
   end
 end

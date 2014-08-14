@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe User do
+describe "User controller" do
   # NB: email address must be mixed case here
   before { @user = User.new name: "Demo Dude", 
   	                        email: "Demo@DuDe.uk",
