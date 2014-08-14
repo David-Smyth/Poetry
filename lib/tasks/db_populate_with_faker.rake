@@ -12,7 +12,8 @@ namespace :db do
       name: "Betty Rubble",
       email: "Betty@BBQforAll.fire",
       password: password,
-      password_confirmation: password)
+      password_confirmation: password,
+      admin: true)
     99.times do |n|
       name = Faker::Name.name
       name_no_blanks = name.gsub(/\s+/, "")
