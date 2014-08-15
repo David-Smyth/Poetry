@@ -92,6 +92,8 @@ gem 'bcrypt-ruby', '3.1.2'
 # Use unicorn as the app server, as recommended by Heroku
 gem 'unicorn'
 
+gem 'devise'
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 

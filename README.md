@@ -39,6 +39,15 @@ gem install ruby-opencv -- --with-opencv-dir=/usr/local/lib
 
 * Services (job queues, cache servers, search engines, etc.)
 
+Uses Devise for confirmation using email. Therefore, need mailcatcher. To download and start:
+---
+% gem install mailcatcher
+% mailcatcher
+---
+
+To do test runs, can monitor mail activity at http://localhost:1080
+
+
 * Deployment instructions
 
 
