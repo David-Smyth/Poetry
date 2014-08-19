@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
-#ruby-gemset=ruby2.0.0rails4.0.8
-
-gem 'rails', '4.0.8'
+ruby '2.1.1'
+#ruby-gemset=ruby2.1.1rails4.1.5
+gem 'rails', '4.1.5'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -86,12 +85,10 @@ gem 'bootstrap-will_paginate', '0.0.9'
 # Gravatar
 gem 'gravatarify', '~> 3.0.0'
 
-# Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '3.1.2'
-
 # Use unicorn as the app server, as recommended by Heroku
 gem 'unicorn'
 
+# Authorization, registration, et al
 gem 'devise'
 
 # Use Capistrano for deployment
